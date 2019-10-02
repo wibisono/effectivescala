@@ -2,7 +2,7 @@
 <head>
 <title>Effective Scala</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<script type="text/javascript" src="http://use.typekit.com/bub8efs.js"></script>
+<script type="text/javascript" src="https://use.typekit.com/bub8efs.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -16,13 +16,13 @@
 </script>
 
 <!--
-<link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 -->
 
-<link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
 
 <style>	
 	body {
@@ -123,11 +123,11 @@
 </head>
 
 <body>
-<p><a href="http://github.com/twitter/effectivescala"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png" alt="Fork me on GitHub"></a></p>
+<p><a href="https://github.com/twitter/effectivescala"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png" alt="Fork me on GitHub"></a></p>
 
 <h1 class="header">Effective Scala</h1>
 
-<address>Marius Eriksen, Twitter Inc.<br />marius@twitter.com (<a href="http://twitter.com/marius">@marius</a>)</address>
+<address>Marius Eriksen, Twitter Inc.<br />marius@twitter.com (<a href="https://twitter.com/marius">@marius</a>)</address>
 
 <h2>Table of Contents</h2>
 
@@ -157,9 +157,9 @@
 
 <h2>Introduction</h2>
 
-<p><a href="http://www.scala-lang.org/">Scala</a> is one of the main application programming languages
+<p><a href="https://www.scala-lang.org/">Scala</a> is one of the main application programming languages
 used at Twitter. Much of our infrastructure is written in Scala and
-<a href="http://github.com/twitter/">we have several large libraries</a>
+<a href="https://github.com/twitter/">we have several large libraries</a>
 supporting our use. While highly effective, Scala is also a large language,
 and our experiences have taught us to practice great care in its
 application. What are its pitfalls? Which features do we embrace,
@@ -188,14 +188,14 @@ it will be inferior in most ways to its original.</p>
 is familiar with the language. Some resources for learning Scala are:</p>
 
 <ul>
-<li><a href="http://twitter.github.com/scala_school/">Scala School</a></li>
-<li><a href="http://www.scala-lang.org/node/1305">Learning Scala</a></li>
-<li><a href="http://matt.might.net/articles/learning-scala-in-small-bites/">Learning Scala in Small Bites</a></li>
+<li><a href="https://twitter.github.com/scala_school/">Scala School</a></li>
+<li><a href="https://docs.scala-lang.org/">Learning Scala</a></li>
+<li><a href="https://matt.might.net/articles/learning-scala-in-small-bites/">Learning Scala in Small Bites</a></li>
 </ul>
 
 <p>This is a living document that will change to reflect our current
 &ldquo;best practices,&rdquo; but its core ideas are unlikely to change: Always
-favor readability; write generic code but not at the expensive of
+favor readability; write generic code but not at the expense of
 clarity; take advantage of simple language features that afford great
 power but avoid the esoteric ones (especially in the type system).
 Above all, be always aware of the trade offs you make. A sophisticated
@@ -228,7 +228,7 @@ different ambiguities in its grammar! Surely the consistent
 application of a carefully chosen set of formatting rules will resolve
 a great deal of ambiguity for both man and machine.</p>
 
-<p>We adhere to the <a href="http://docs.scala-lang.org/style/">Scala style
+<p>We adhere to the <a href="https://docs.scala-lang.org/style/">Scala style
 guide</a> plus the following rules.</p>
 
 <p><a id="Formatting-Whitespace" /></p>
@@ -293,7 +293,7 @@ no more information than <code>User.get</code>.
 <dt>When using collections, qualify names by importing 
 <code>scala.collection.immutable</code> and/or <code>scala.collection.mutable</code></dt>
 <dd>Mutable and immutable collections have dual names. 
-Qualifiying the names makes is obvious to the reader which variant is being used (e.g. "<code>immutable.Map</code>")</dd>
+Qualifiying the names makes it obvious to the reader which variant is being used (e.g. "<code>immutable.Map</code>")</dd>
 <dt>Do not use relative imports from other packages</dt>
 <dd>Avoid <pre><code>import com.twitter
 import concurrent</code></pre> in favor of the unambiguous <pre><code>import com.twitter.concurrent</code></pre></dd>
@@ -388,7 +388,7 @@ remain mindful of the reader: judicious use of types can serve to
 enhance clarity, being unduly clever only obfuscates.</p>
 
 <p>Scala&rsquo;s powerful type system is a common source of academic
-exploration and exercise (eg. <a href="http://apocalisp.wordpress.com/2010/06/08/type-level-programming-in-scala/">Type level programming in
+exploration and exercise (eg. <a href="https://apocalisp.wordpress.com/2010/06/08/type-level-programming-in-scala/">Type level programming in
 Scala</a>).
 While a fascinating academic topic, these techniques rarely find
 useful application in production code. They are to be avoided.</p>
@@ -567,7 +567,7 @@ library; collections are high level and expose a large set of
 operations. Many collection manipulations and transformations can be
 expressed succinctly and readably, but careless application of these
 features can often lead to the opposite result. Every Scala programmer
-should read the <a href="http://www.scala-lang.org/docu/files/collections-api/collections.html">collections design
+should read the <a href="https://www.scala-lang.org/docu/files/collections-api/collections.html">collections design
 document</a>;
 it provides great insight and motivation for Scala collections
 library.</p>
@@ -696,7 +696,7 @@ incur severe performance or space penalties.</p>
 collection appropriate for your use. Make sure your datastructure
 doesn&rsquo;t have unexpected asymptotic complexity. The complexities of the
 various Scala collections are described
-<a href="http://www.scala-lang.org/docu/files/collections-api/collections_40.html">here</a>.</p>
+<a href="https://www.scala-lang.org/docu/files/collections-api/collections_40.html">here</a>.</p>
 
 <p>The first rule of optimizing for performance is to understand <em>why</em>
 your application is slow. Do not operate without data;
@@ -766,7 +766,7 @@ management would be required.</p>
 <h3>Futures</h3>
 
 <p>Use Futures to manage concurrency. They decouple
-concurrent operations from resource management: for example, <a href="http://github.com/twitter/finagle">Finagle</a>
+concurrent operations from resource management: for example, <a href="https://github.com/twitter/finagle">Finagle</a>
 multiplexes concurrent operations onto few threads in an efficient
 manner. Scala has lightweight closure literal syntax, so Futures
 introduce little syntactic overhead, and they become second nature to
@@ -853,9 +853,8 @@ include ones that are thrown when resources are exhausted, like
 OutOfMemoryError, and also JVM-level errors like NoSuchMethodError. These
 conditions are ones under which the JVM must exit.</p>
 
-<p>The predicates <code>scala.util.control.NonFatal</code> &mdash; or Twitter&rsquo;s version
-<code>com.twitter.util.NonFatal</code> &mdash; should be used to identify exceptions
-which should be returned as a Future.exception.</p>
+<p>The predicate <code>scala.util.control.NonFatal</code> should be used to
+identify exceptions which should be returned as a Future.exception.</p>
 
 <p><a id="Concurrency-Collections" /></p>
 
@@ -1177,7 +1176,7 @@ pattern matching:</p>
 </code></pre>
 
 <p>Do not overuse <code>Option</code>: if there is a sensible
-default &mdash; a <a href="http://en.wikipedia.org/wiki/Null_Object_pattern"><em>Null Object</em></a> &mdash; use that instead.</p>
+default &mdash; a <a href="https://en.wikipedia.org/wiki/Null_Object_pattern"><em>Null Object</em></a> &mdash; use that instead.</p>
 
 <p><code>Option</code> also comes with a handy constructor for wrapping nullable values:</p>
 
@@ -1218,7 +1217,7 @@ example if you are matching case classes); instead of</p>
 }
 </code></pre>
 
-<p>Write <a href="http://www.scala-lang.org/node/112">custom extractors</a> but only with
+<p>Write <a href="https://docs.scala-lang.org/tour/extractor-objects.html">custom extractors</a> but only with
 a dual constructor (<code>apply</code>), otherwise their use may be out of place.</p>
 
 <p>Don&rsquo;t use pattern matching for conditional execution when defaults
@@ -1428,7 +1427,7 @@ time with all the benefits of static type checking.</p>
 
 <p>A motivation behind the mixin system was to obviate the need for
 traditional dependency injection. The culmination of this &ldquo;component
-style&rdquo; of programming is <a href="http://jonasboner.com/2008/10/06/real-world-scala-dependency-injection-di/">the cake
+style&rdquo; of programming is <a href="http://jonasboner.com/real-world-scala-dependency-injection-di/">the cake
 pattern</a>.</p>
 
 <p><a id="Object oriented programming-Dependency injection" /></p>
@@ -1610,7 +1609,7 @@ code</p>
 }
 </code></pre>
 
-<p class="LP">is almost always wrong, as it would catch fatal errors that need to be propagated. Instead, use the <code>com.twitter.util.NonFatal</code> extractor to handle only nonfatal exceptions.</p>
+<p class="LP">is almost always wrong, as it would catch fatal errors that need to be propagated. Instead, use the <code>scala.util.control.NonFatal</code> extractor to handle only nonfatal exceptions.</p>
 
 <pre><code>try {
   operation()
@@ -1631,7 +1630,7 @@ style. Hotspot&rsquo;s generational garbage collection typically makes this
 a nonissue as short-lived garbage is effectively free in most circumstances.</p>
 
 <p>Before tackling GC performance issues, watch
-<a href="http://www.infoq.com/presentations/JVM-Performance-Tuning-twitter">this</a>
+<a href="https://www.infoq.com/presentations/JVM-Performance-Tuning-twitter">this</a>
 presentation by Attila that illustrates some of our experiences with
 GC tuning.</p>
 
@@ -1674,7 +1673,7 @@ abstract class JavaAnimal extends Animal
 <h2>Twitter&rsquo;s standard libraries</h2>
 
 <p>The most important standard libraries at Twitter are
-<a href="http://github.com/twitter/util">Util</a> and
+<a href="https://github.com/twitter/util">Util</a> and
 <a href="https://github.com/twitter/finagle">Finagle</a>. Util should be
 considered an extension to the Scala and Java standard libraries,
 providing missing functionality or more appropriate implementations. Finagle
@@ -1876,7 +1875,7 @@ other situation.</p>
 
 <p>Concurrent systems are greatly complicated by the need to coordinate
 access to shared data and resources.
-<a href="http://doc.akka.io/api/akka/current/index.html#akka.actor.Actor">Actors</a>
+<a href="https://doc.akka.io/api/akka/current/index.html#akka.actor.Actor">Actors</a>
 present one strategy of simplification: each actor is a sequential process
 that maintains its own state and resources, and data is shared by
 messaging with other actors. Sharing data requires communicating between
@@ -1954,7 +1953,7 @@ recvOf.sync()
 </code></pre>
 
 <p>It may be tempting to compare the use of Offer/Broker to
-<a href="http://docs.oracle.com/javase/6/docs/api/java/util/concurrent/SynchronousQueue.html">SynchronousQueue</a>,
+<a href="https://docs.oracle.com/javase/6/docs/api/java/util/concurrent/SynchronousQueue.html">SynchronousQueue</a>,
 but they are different in subtle but important ways. Offers can be composed in ways that such queues simply cannot. For example, consider a set of queues, represented as Brokers:</p>
 
 <pre><code>val q0 = new Broker[Int]
@@ -2031,7 +2030,7 @@ the aid of Offer/Broker) is a useful <em>structuring</em> tool, just as
 subroutines, classes, and modules are &mdash; another important
 idea from CSP.</p>
 
-<p>One example of this is the <a href="http://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">Sieve of
+<p>One example of this is the <a href="https://en.wikipedia.org/wiki/Sieve_of_Eratosthenes">Sieve of
 Eratosthenes</a>,
 which can be structured as a successive application of filters to a
 stream of integers. First, we&rsquo;ll need a source of integers:</p>
@@ -2102,7 +2101,7 @@ provided much helpful guidance and many excellent suggestions.</p>
 <ol id="notes">
 
 <li id="fn1">
-<a href="http://yourkit.com">Yourkit</a> is a good profiler <a href="#fnref1" title="Jump back to reference">[back]</a></li>
+<a href="https://www.yourkit.com/">Yourkit</a> is a good profiler <a href="#fnref1" title="Jump back to reference">[back]</a></li>
 <li id="fn2">
 From <a href="https://github.com/twitter/finagle/blob/master/finagle-core/src/main/scala/com/twitter/finagle/loadbalancer/Heap.scala#L41">Finagle&rsquo;s heap
 balancer</a> <a href="#fnref2" title="Jump back to reference">[back]</a></li>

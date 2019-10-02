@@ -2,7 +2,7 @@
 <head>
 <title>Effective Scala</title>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<script type="text/javascript" src="http://use.typekit.com/bub8efs.js"></script>
+<script type="text/javascript" src="https://use.typekit.com/bub8efs.js"></script>
 <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -16,14 +16,14 @@
 </script>
 
 <!--
-<link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
-<link href='http://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Inconsolata' rel='stylesheet' type='text/css'>
 -->
 
 <!--
-<link href='http://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Droid+Sans+Mono' rel='stylesheet' type='text/css'>
 -->
 
 <style>	
@@ -125,11 +125,11 @@
 </head>
 
 <body>
-<p><a href="http://github.com/twitter/effectivescala"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png" alt="Fork me on GitHub"></a></p>
+<p><a href="https://github.com/twitter/effectivescala"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_green_007200.png" alt="Fork me on GitHub"></a></p>
 
 <h1 class="header">Effective Scala</h1>
 
-<address>Marius Eriksen, Twitter Inc.<br />marius@twitter.com (<a href="http://twitter.com/marius">@marius</a>)<br /><br />[translated by Yuta Okamoto (<a href="http://github.com/okapies">@okapies</a>) and Satoshi Kobayashi (<a href="https://github.com/scova0731">@scova0731</a>)]</address>
+<address>Marius Eriksen, Twitter Inc.<br />marius@twitter.com (<a href="https://twitter.com/marius">@marius</a>)<br /><br />[translated by Yuta Okamoto (<a href="https://github.com/okapies">@okapies</a>) and Satoshi Kobayashi (<a href="https://github.com/scova0731">@scova0731</a>)]</address>
 
 <h2>Table of Contents</h2>
 
@@ -168,9 +168,9 @@
 <p>これは Scala の入門ではない。本ガイドは Scala に慣れ親しんだ読者を前提としている。これから Scala を学びたい読者には以下のような教材がある:</p>
 
 <ul>
-<li><a href="http://twitter.github.com/scala_school/">Scala School</a></li>
-<li><a href="http://www.scala-lang.org/node/1305">Learning Scala</a></li>
-<li><a href="http://matt.might.net/articles/learning-scala-in-small-bites/">Learning Scala in Small Bites</a></li>
+<li><a href="https://twitter.github.com/scala_school/">Scala School</a></li>
+<li><a href="https://www.scala-lang.org/node/1305">Learning Scala</a></li>
+<li><a href="https://matt.might.net/articles/learning-scala-in-small-bites/">Learning Scala in Small Bites</a></li>
 </ul>
 
 <p>本ガイドは生きたドキュメントなので、我々の最新の”ベストプラクティス”を反映するために変更されるかもしれない。しかし、中核となるアイデアが変わることはないだろう: 可読性を常に優先せよ; 汎用的なコードを書き、しかし明瞭さを損なわないこと; シンプルな言語機能を活用せよ。シンプルさは偉大な力をもたらし、また（特に型システムにおける）難解さを回避できる。とりわけ、常にトレードオフを意識しよう。洗練された言語は複雑な実装を要求し、複雑さは複雑さを生む。推論の複雑さ、意味論の複雑さ、機能間相互作用の複雑さ、そして君の協力者への理解の複雑さを。したがって、複雑さは洗練がもたらす税金であり、効用がコストを上回っていることを常に確認すべきだ。</p>
@@ -1106,7 +1106,7 @@ val addr: Option[InetSocketAddress] =
 
 <p>Scala の偉大さの大部分は、オブジェクトシステムによるものだ。Scala は<em>すべての値</em>がオブジェクトであるという意味で<em>純粋な</em>言語であり、プリミティブ型と複合型の間に違いはない。Scala にはミックスイン (mixin) の機能もある。ミックスインを使うと、もっと直交的かつ段階的にモジュールを組み合わせられるだけでなく、そこにコンパイル時の静的な型検査を柔軟に組み合わせて、その恩恵をすべて享受できる。</p>
 
-<p>ミックスインシステムの背景にある動機は、従来の依存性注入 (dependency injection) を不要にすることだ。その”コンポーネントスタイル”のプログラミングの極致こそが <a href="http://jonasboner.com/2008/10/06/real-world-scala-dependency-injection-di/">Cake
+<p>ミックスインシステムの背景にある動機は、従来の依存性注入 (dependency injection) を不要にすることだ。その”コンポーネントスタイル”のプログラミングの極致こそが <a href="http://jonasboner.com/real-world-scala-dependency-injection-di/">Cake
 パターン</a>（<a href="http://eed3si9n.com/ja/real-world-scala-dependency-injection-di">日本語訳</a>）だ。</p>
 
 <p><a id="オブジェクト指向プログラミング-依存性注入" /></p>
